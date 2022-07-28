@@ -1,0 +1,76 @@
+body {
+  font: 1.2em "Fira Sans", sans-serif;
+}
+
+#searchContainer {
+  width: 100vw;
+}
+
+#input {
+  width: 70vw;
+  height: 50px;
+  border-style: double;
+}
+
+#submitRecipiesBtn {
+  width: 25vw;
+  height: 54px;
+  background: beige;
+  border-style: double;
+}
+
+#submitRecipiesBtn:hover {
+  background: rgb(201, 181, 222);
+}
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+#displayRecipies {
+  margin-left: 15px;
+  display: inline-block;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+
+.displayRecipiesData {
+  border-style: double;
+  width: 80%;
+  background-color: rgb(201, 181, 222);
+  padding: 20px;
+}
+
+.title {
+  display: block;
+  background-color: beige;
+  color: black;
+  text-decoration: none;
+}
+.title:hover {
+  color: rgb(175, 146, 205);
+}
+
+.recipeImage {
+  justify-items: center;
+  justify-self: center;
+  width: 25vmax;
+  height: 10vmax;
+  margin-top: 20px;
+  margin-left: 0px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ingredientsText {
+  color: black;
+  padding: 5px;
+  font-weight: bold;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style-type: circle;
+}
+
+.liIngredient {
+  padding: 8px;
+}

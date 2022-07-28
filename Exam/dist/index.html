@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Omama Exam Project</title>
+  </head>
+  <body>
+    <div id="searchContainer">
+      <input type="text" id="input" placeholder="Enter the ingredients here:" />
+      <button
+        type="submit"
+        id="submitRecipiesBtn"
+        onclick="displayRecipiesBtn()"
+        style="font-weight: bold"
+      >
+        Search!
+      </button>
+    </div>
+    <br />
+    <br />
+
+    <div id="displayRecipies"></div>
+
+    <script id="displayRecipies-template" type="text/x-handlebars-template">
+      <div class="displayRecipiesData">
+        <a class="title" href="{{this.href}}" target="_blank">{{this.title}}</a>
+        <img class="recipeImage" src="{{this.thumbnail}}" />
+        <div class="ingredientsText">Ingredients:</div>
+        <ul class="ul">
+          {{#each ingredients}}
+            <li class="liIngredient">{{this}}</li>
+          {{/each}}
+        </ul>
+      </div>
+    </script>
+
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
